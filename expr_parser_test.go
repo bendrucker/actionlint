@@ -32,6 +32,16 @@ func TestParseExpressionSyntaxOK(t *testing.T) {
 			expected: &BoolNode{Value: false},
 		},
 		{
+			what:     "boolean literal true in upper case",
+			input:    "TRUE",
+			expected: &BoolNode{Value: true},
+		},
+		{
+			what:     "boolean literal false in upper case",
+			input:    "FALSE",
+			expected: &BoolNode{Value: false},
+		},
+		{
 			what:     "integer literal",
 			input:    "711",
 			expected: &IntNode{Value: 711},
