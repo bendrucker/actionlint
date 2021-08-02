@@ -93,3 +93,8 @@ jobs:
       - run: make lint
       - name: Lint bash scripts
         run: shellcheck ./scripts/download-actionlint.bash ./playground/post-install.bash ./playground/deploy.bash
+  tmp:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo '${{ True }}'
+      - run: echo '${{ False }}'
